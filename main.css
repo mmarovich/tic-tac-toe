@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+.game {
+	max-width: 1000px;
+	height: 100%;
+	width: 100%;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	margin: 0 auto;
+  	position:fixed;
+  	top: 0;
+ }
+
+.game::before,
+.game::after {
+  display: table;
+  content: '';
+}
+
+.game::after {
+  clear: both;
+}
+
+.board{
+	width: 100%;
+	height: 33.33%;
+	float: left;
+	padding: 20px 50px;
+	transform: translateY(0) skew(-20deg);
+	position: relative;
+  	top: 0;
+}
+
+.box {
+	display: inline-block;
+	position: relative;
+	width: 33.3%;
+	height: 33.3%;
+}
+
+.box img {
+	height: 90%;
+	width: 90%;
+	position: absolute;
+}
+
+.UL, .UM, .UR {
+	border-bottom: 10px solid black;
+}
+
+.ML, .MM, .MR {
+	border-bottom: 10px solid black;
+	border-top: 10px solid black;
+}
+
+.UL, .ML, .LL {
+	border-right: 10px solid black;
+}
+
+.UM, .MM, .LM {
+	border-right: 10px solid black;
+}
+
+.LL, .LM, .LR {
+	border-top: 10px solid black;
+}
+
+.hidden {
+	display: none;
+}
+
+.chooseX {
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+}
+
+.chooseO {
+	position: absolute;
+	bottom: 20px;
+	right: 0;
+}
+
+.endGame {
+	position: absolute;
+	height: 100%;
+	width:100%;
+	display: none;
+}
+
+.endGame p {
+	font-size: 60px;
+	text-align: center;
+	color: green;
+	position: absolute;
+  	top: 50%;
+}
+
+
+@media only screen and (min-width: 768px){
+	.board {
+	width: 33.33%;
+	height: 33.33%;
+  	top: 50%;
+  	transform: translateY(-50%) skew(-20deg);
+	}
+}
