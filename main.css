@@ -8,6 +8,12 @@ body, html {
 	margin: 0;
 }
 
+.backGround {
+	z-index: -1;
+	height: 100%;
+	width: 100%;
+}
+
 .game {
 	max-width: 1000px;
 	height: 100%;
@@ -47,8 +53,8 @@ body, html {
 }
 
 .box img {
-	height: 90%;
-	width: 90%;
+	height: 100%;
+	width: 100%;
 	position: absolute;
 }
 
@@ -80,28 +86,56 @@ body, html {
 .chooseX {
 	position: absolute;
 	bottom: 20px;
-	left: 0;
+	left: 10%;
 }
 
 .chooseO {
 	position: absolute;
 	bottom: 20px;
-	right: 0;
+	right: 10%;
 }
 
 .endGame {
 	position: absolute;
 	height: 100%;
 	width:100%;
-	display: none;
 }
 
 .endGame p {
-	font-size: 60px;
+	font-size: 75px;
 	text-align: center;
 	color: green;
 	position: absolute;
-  	top: 50%;
+  	top: 15%;
+}
+
+.startOver {
+	position: absolute;
+	bottom: 20%;
+	left: 30%;
+}
+
+.cover {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+button {
+	z-index: 5;
+	border-radius: 50%;
+	height: 100px;
+	width: 100px;
+	background-color: brown;
+	color: maroon;
+	border-color: brown;
+	font-size: 20px;
+	font-weight: bold;
+	transition: 1s;
+}
+
+button:focus {
+	outline: none;
 }
 
 

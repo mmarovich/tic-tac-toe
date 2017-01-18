@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="main.css"/>
 </head>
 <body>
+	<img class="backGround" src="images/backGround.jpg">
 	<div class="game">
 		<div class="board B1"><!--
 			--><div class="box UL"></div><!--
@@ -52,20 +53,16 @@
 			--><div class="box LR"></div>
 		</div>
 	
-	<div class="endGame">
-		<p class="hidden"><b>Player One Wins!!!</b></p>
-		<p class="hidden"><b>Player Two Wins!!!</b></p>
+	<div class="endGame hidden">
+		<p class="player1Wins hidden"><b>Player One Wins!!!</b></p>
+		<p class="player2Wins hidden"><b>Player Two Wins!!!</b></p>
+		<button class="startOver hidden" type="button">Start Over</button>
 	</div>
 	
-	<button class="chooseX" type="button">First Player Is X</button>
-	<button class="chooseO" type="button">First Player Is O</button>
+	<button class="chooseX" type="button">First Player X</button>
+	<button class="chooseO" type="button">First Player O</button>
 
-	<div class="Score">
-		<div class="Player1"></div>
-		<div class="Player2"></div>
-		<div class="CatsGame"></div>
-	</div>
-	</div>
+	<div class="cover"></div>
 
 	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
  	<script src="app.js"></script>
