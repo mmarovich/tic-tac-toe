@@ -126,6 +126,8 @@ var state = {
 	playerTracker: 1
 }
 
+// After every click, this function is initiated to loop through the state and
+// look for a winner.
 function player1Wins(){
 	var obj = state.player1.gridTracker;
 	for(var prop in obj){
@@ -160,7 +162,7 @@ function player2Wins(){
 	}
 }
 
-
+// state reset:
 function purge1(){
 	var obj = state.player1.gridTracker;
 	for(var prop in obj){
@@ -181,6 +183,9 @@ function purge2(){
 
 $(document).ready(function(){
 
+// click functions for choosing X and O.  Hides buttons, pushes the cover back
+// so that the board can be played on, and sets images for each player.
+
 	$('.chooseX').click(function(){
 		$('.chooseX').addClass('hidden');
 		$('.chooseO').addClass('hidden');
@@ -197,6 +202,9 @@ $(document).ready(function(){
 		state.player2.image = "images/X.png";
 	})
 
+
+// everything is reset here. the purge function is on line 166, and it resets the state.
+// the box divs are turned off and then turned on.
 	$('.startOver').click(function(){
 		$('.box img').remove();
 		$('.chooseX').removeClass('hidden');
@@ -243,7 +251,9 @@ $(document).ready(function(){
 		$('.B3 > .LR').click(B3LR);
 	})
 
-
+// 27 separate click functions for each of the 27 play spots.  The images are spawned
+// with a class and a corresponding state variable for every possible winning permutation.  
+// This is used to link the DOM to the state.
 	function B1UL(){
 		$(this).off("click");
 		if (state.playerTracker === 1){
