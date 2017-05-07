@@ -134,7 +134,7 @@ function player1Wins(){
 		for(var prop2 in obj[prop]){
 	    	if(obj[prop][prop2] === 3){
 	    		var x = document.getElementsByClassName(prop2);
-	    		$(x).css({"height": "120%", "width": "120%"})
+	    		$(x).css({"height": "150%", "width": "150%", "z-index": "3"})
 	    		$('.endGame').removeClass('hidden');
 	    		$('.player1Wins').removeClass('hidden');
 	    		$('.startOver').removeClass('hidden');
@@ -151,7 +151,7 @@ function player2Wins(){
 		for(var prop2 in obj[prop]){
 			if(obj[prop][prop2] === 3){
 				var x = document.getElementsByClassName(prop2);
-				$(x).css({"height": "120%", "width": "120%"});
+				$(x).css({"height": "150%", "width": "150%", "z-index": "3"});
 				$('.endGame').removeClass('hidden');
 				$('.player2Wins').removeClass('hidden');
 				$('.startOver').removeClass('hidden');
